@@ -1,0 +1,98 @@
+.modal {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  opacity: 0.5;
+  z-index: 150;
+
+  display: none;
+}
+
+.login {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  z-index: 0; // to 200
+  transform: translate(-50%, -20%);
+  width: 448px;
+  height: 500px;
+  padding: 48px 40px 36px 40px;
+
+  text-align: center;
+  border: 1px solid #dadce0;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+
+  opacity: 0; //for javascript
+  transition: opacity 0.5s linear;
+
+  display: flex;
+  flex-direction: column;
+
+  h3,
+  p {
+    margin-top: 0;
+  }
+
+  h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  .login-logo {
+    display: inline-block;
+    font-weight: 600;
+
+    span:nth-of-type(1) {
+      color: $violet;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+
+    label {
+      text-align: left;
+      margin-bottom: 10px;
+    }
+
+    input {
+      padding: 13px 15px;
+      border: 1px solid #dadce0;
+      border-radius: 5px;
+      font-family: inherit;
+      margin-bottom: 24px;
+    }
+
+    input:focus-visible {
+      outline: none;
+      border: 1px solid $violet;
+    }
+
+    .Sign-in {
+      border-radius: 5px;
+      border: 1px solid transparent;
+      padding: 10px 0;
+      font-family: inherit;
+      background-color: $violet;
+      color: $white;
+      font-size: 16px;
+      margin-bottom: 24px;
+    }
+
+    .Sign-in:hover {
+      cursor: pointer;
+      background-color: #1e1e94;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}

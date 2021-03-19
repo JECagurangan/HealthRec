@@ -18,6 +18,28 @@
   </head>
   <body>
     <div class="wrapper">
+      <!-- wrapper -->
+      <div class="modal"></div>
+      <div class="login">
+        <h3>Sign in</h3>
+        <p>
+          to continue to <span class="login-logo"><span>Health</span>Rec</span>
+        </p>
+        <form action="">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            placeholder="Email or Phone Number"
+            name="username"
+          />
+          <label for="password">Password</label>
+          <input type="password" placeholder="Password" />
+
+          <button class="Sign-in">Sign In</button>
+          <p>Don't have an account yet? <a href="#">Join HealthRec</a></p>
+        </form>
+      </div>
+
       <header>
         <nav>
           <h1 class="nav__logo"><span>Health</span><span>Rec</span></h1>
@@ -29,7 +51,7 @@
             <a href="#">Features</a>
             <a href="#">Pricing</a>
             <a href="#">Contacts</a>
-            <a href="#">Login</a>
+            <a href="#" class="login-button">Login</a>
           </div>
         </nav>
       </header>
@@ -41,7 +63,7 @@
             <a href="">Features</a>
             <a href="">Pricing</a>
             <a href="">Contacts</a>
-            <button>Login</button>
+            <button class="login-hamburger">Login</button>
           </div>
           <div class="welcome__statement">
             <h3>Cloud and On-Premise</h3>
@@ -52,107 +74,81 @@
               eum voluptate non labore quam, cupiditate sequi.
             </p>
           </div>
-          <!-- <div class="login">
-            <h3>See HealthRec in Action</h3>
 
-            <div>
-              <label for="name">Full Name*</label>
-              <input type="text" name="name" id="name" required="true" />
-            </div>
-
-            <div>
-              <label for="name">Work Email*</label>
-              <input type="email" name="name" id="name" />
-            </div>
-
-            <div>
-              <label for="name">Company*</label>
-              <input type="text" name="name" id="name" />
-            </div>
-
-            <div>
-              <label for="name">Phone Number*</label>
-              <input type="text" name="name" id="name" />
-            </div>
-
-            <div>
-              <label for="name">Country*</label>
-              <input type="text" name="country" id="country" />
-            </div>
-
-            <button>Get Free Demo</button>
-          </div> -->
           <div class="illustration"></div>
         </section>
       </div>
-    </div>
 
-    <div class="benefits-container">
-      <section class="benefits">
-        <div class="container">
-          <h3>Why Choose Us</h3>
-          <p>
-            Provide better service to your patients with our highly flexible
-            implementation and engagement models at a very accommodating price
-            point.
-          </p>
-        </div>
+      <div class="benefits-container">
+        <section class="benefits">
+          <div class="container">
+            <h3>Why Choose Us</h3>
+            <p>
+              Provide better service to your patients with our highly flexible
+              implementation and engagement models at a very accommodating price
+              point.
+            </p>
+          </div>
 
-        <div class="container">
-          <div class="icon icon--connect"></div>
-          <p>
-            <strong>Connect with all the stakeholders</strong> <br />
-            with our complete and extensive healthcare ecosystem.
-          </p>
-        </div>
+          <div class="container">
+            <div class="icon icon--connect"></div>
+            <p>
+              <strong>Connect with all the stakeholders</strong> <br />
+              with our complete and extensive healthcare ecosystem.
+            </p>
+          </div>
 
-        <div class="container">
-          <div class="icon icon--avoid"></div>
-          <p>
-            <strong>Avoid deadling with multiple vendors</strong> and <br />
-            procure all kinds of services, products, and solutions in one place.
-          </p>
-        </div>
+          <div class="container">
+            <div class="icon icon--avoid"></div>
+            <p>
+              <strong>Avoid deadling with multiple vendors</strong> and <br />
+              procure all kinds of services, products, and solutions in one
+              place.
+            </p>
+          </div>
 
-        <div class="container">
-          <div class="icon icon--comply"></div>
-          <p>
-            <strong>Comply with global standards</strong> <br />
-            and get customized solutions as per your business requirement.
-          </p>
-        </div>
-      </section>
-    </div>
+          <div class="container">
+            <div class="icon icon--comply"></div>
+            <p>
+              <strong>Comply with global standards</strong> <br />
+              and get customized solutions as per your business requirement.
+            </p>
+          </div>
+        </section>
+      </div>
 
-    <div class="footer-container">
-      <footer>
-        <div class="members">
-          <span>CS155-2L</span>
-          <span>Agcanas</span>
-          <span>Balita</span>
-          <span>Cagurangan</span>
-          <span>Cadiao</span>
-          <span>Santos</span>
-        </div>
+      <div class="footer-container">
+        <footer>
+          <div class="members">
+            <span>CS155-2L</span>
+            <span>Agcanas</span>
+            <span>Balita</span>
+            <span>Cadiao</span>
+            <span>Cagurangan</span>
+            <span>Santos</span>
+          </div>
 
-        <div class="members">
-          <span>Follow Us</span>
-          <span>Facebook</span>
-          <span>Instagram</span>
-          <span>Behance</span>
-          <span>Dribbble</span>
-          <span>Twitter</span>
-        </div>
+          <div class="members">
+            <span>Follow Us</span>
+            <span>Facebook</span>
+            <span>Instagram</span>
+            <span>Behance</span>
+            <span>Dribbble</span>
+            <span>Twitter</span>
+          </div>
 
-        <div class="members">
-          <span>Links</span>
-          <span>Company</span>
-          <span>Features</span>
-          <span>Pricing</span>
-          <span>Contacts</span>
-          <span>Login</span>
-        </div>
-      </footer>
+          <div class="members">
+            <span>Links</span>
+            <span>Company</span>
+            <span>Features</span>
+            <span>Pricing</span>
+            <span>Contacts</span>
+            <span>Login</span>
+          </div>
+        </footer>
+      </div>
+
+      <!-- wrapper -->
     </div>
 
     <script src="app.js"></script>
