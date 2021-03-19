@@ -1,0 +1,84 @@
+.benefits-container {
+  padding: 44px 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+
+  @media (min-width: 820px) {
+    padding: 0px 109px;
+  }
+}
+
+.benefits {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+
+  @media (min-width: 820px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1200px;
+    gap: 20px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+
+    transition: box-shadow 0.2s ease-in-out;
+    @media (min-width: 820px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .container:not(:first-child):hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+
+  .container:nth-of-type(1) {
+    @media (min-width: 820px) {
+      grid-column-start: 1;
+      grid-column-end: 4;
+    }
+  }
+
+  h3 {
+    line-height: 2.25rem;
+    font-size: 1.6099rem;
+    margin: 0;
+  }
+
+  .icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &--connect {
+      background-image: url(./images/4138828-medical/svg/010-eye.svg);
+    }
+
+    &--avoid {
+      background-image: url(./images/4138828-medical/svg/027-medical-records.svg);
+    }
+
+    &--comply {
+      background-image: url(./images/4138828-medical/svg/019-caduceus.svg);
+    }
+  }
+
+  p {
+    line-height: 1.6875rem;
+    font-size: 1.0526rem;
+    max-width: 335px;
+    margin-bottom: 0;
+  }
+}

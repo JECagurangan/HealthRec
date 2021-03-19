@@ -1,0 +1,148 @@
+header {
+  background-color: $gray;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 104px;
+  width: 100%;
+
+  padding: 0px 20px;
+
+  @media (min-width: 820px) {
+    padding: 0px 109px;
+  }
+}
+
+nav {
+  width: 100%;
+  max-width: 500px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (min-width: 820px) {
+    max-width: 1200px;
+  }
+}
+
+.nav__logo {
+  span:nth-of-type(1) {
+    color: $violet;
+  }
+
+  @media (min-width: 820px) {
+    max-width: 1200px;
+  }
+}
+
+.nav__hamburger {
+  border: 1px solid $violet;
+  border-radius: 10px;
+
+  padding: 10px 20px;
+
+  color: $violet;
+  transition: all 0.3s ease-in-out;
+
+  @media (min-width: 931px) {
+    display: none;
+  }
+}
+
+.nav__hamburger:hover {
+  cursor: pointer;
+  background-color: $violet;
+  color: white;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+
+  a {
+    color: $dk-blue;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+  }
+
+  a:hover {
+    color: $violet;
+  }
+
+  a:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  a:last-child {
+    background-color: $violet;
+    color: white;
+    padding: 10px 40px;
+    border-radius: 20px;
+    font-weight: 600;
+
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  }
+
+  a:last-child:hover {
+    background-color: #1e1e94;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+
+  @media (max-width: 930px) {
+    display: none;
+  }
+}
+
+.hamburger__menu {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fafaff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  //for javascript
+  padding: 0px 20px; //to 30px 20px
+  height: 0px; //to 341px
+  overflow: hidden; //to show
+
+  transition: all 0.5s ease-in-out;
+
+  a {
+    color: $dk-blue;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: $violet;
+  }
+
+  button {
+    background-color: $violet;
+    color: white;
+    padding: 10px 40px;
+    border-radius: 20px;
+    font-weight: 600;
+    border: 1px solid transparent;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  }
+
+  button:hover {
+    background-color: #1e1e94;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+
+  @media (min-width: 930px) {
+    display: none;
+  }
+}
