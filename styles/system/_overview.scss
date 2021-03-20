@@ -1,0 +1,54 @@
+.overview-body {
+  width: 100%;
+  padding: 33px 49px 35px 32px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 114px 300px 300px 1fr;
+  gap: 33px;
+}
+
+.dashboard {
+  grid-column: 1/ 4;
+  grid-row: 2 / 3;
+  width: 100%;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+
+  &__body {
+    height: 100%;
+    width: 100%;
+    background-color: $white;
+
+    border-radius: 5px;
+  }
+}
+
+.patients-trend {
+  grid-column: 1/ 4;
+  grid-row: 3 / 4;
+  width: 100%;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+
+  &__body {
+    height: 100%;
+    width: 100%;
+    background-color: $white;
+
+    border-radius: 5px;
+  }
+}
+
+.latest-patients {
+  grid-column: 1/ 4;
+  grid-row: 4 / 5;
+  width: 100%;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+
+  &__body {
+    height: 100%;
+    width: 100%;
+    background-color: $white;
+
+    border-radius: 5px;
+  }
+}
