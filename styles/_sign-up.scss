@@ -40,6 +40,21 @@
     flex-direction: column;
     margin-top: 24px;
 
+    .account-type {
+      display: flex;
+      justify-content: space-between;
+
+      button {
+        width: 49%;
+        background-color: $white;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 13px 15px;
+        font-family: inherit;
+        margin-bottom: 24px;
+      }
+    }
+
     .full-name {
       display: flex;
       justify-content: space-between;

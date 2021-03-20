@@ -199,6 +199,25 @@ body {
   margin-top: 24px;
 }
 
+.sign-up form .account-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sign-up form .account-type button {
+  width: 49%;
+  background-color: #ffffff;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 13px 15px;
+  font-family: inherit;
+  margin-bottom: 24px;
+}
+
 .sign-up form .full-name {
   display: -webkit-box;
   display: -ms-flexbox;
