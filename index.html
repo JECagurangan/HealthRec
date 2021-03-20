@@ -36,7 +36,32 @@
           <input type="password" placeholder="Password" />
 
           <button class="Sign-in">Sign In</button>
-          <p>Don't have an account yet? <a href="#">Join HealthRec</a></p>
+          <p>
+            Don't have an account yet? <a href="#" id="join">Join HealthRec</a>
+          </p>
+        </form>
+      </div>
+
+      <div class="sign-up">
+        <h3>Create your HealthRec Account</h3>
+        <form action="#">
+          <div class="full-name">
+            <input type="text" placeholder="First name" name="first-name" />
+            <input type="text" placeholder="Last name" name="last-name" />
+          </div>
+          <input type="text" placeholder="Username" name="username" />
+          <div class="password">
+            <input type="password" placeholder="Password" name="password" />
+            <input
+              type="password"
+              placeholder="Confirm"
+              name="password-confirm"
+            />
+          </div>
+          <button class="create-account">Create Account</button>
+          <p>
+            Already have an account? <a href="#" id="back-to-login">Log in</a>
+          </p>
         </form>
       </div>
 
@@ -51,7 +76,7 @@
             <a href="#">Features</a>
             <a href="#">Pricing</a>
             <a href="#">Contacts</a>
-            <a href="#" class="login-button">Login</a>
+            <a href="#" class="login-button">Sign In</a>
           </div>
         </nav>
       </header>

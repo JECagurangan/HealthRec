@@ -57,6 +57,11 @@ nav {
   cursor: pointer;
   background-color: $violet;
   color: white;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.nav__hamburger:active {
+  background-color: #16166b;
 }
 
 .nav__links {
@@ -89,6 +94,11 @@ nav {
 
   a:last-child:hover {
     background-color: #1e1e94;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+
+  a:last-child:active {
+    background-color: #16166b;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   }
 
@@ -140,6 +150,10 @@ nav {
   button:hover {
     background-color: #1e1e94;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+
+  button:active {
+    background-color: #16166b;
   }
 
   @media (min-width: 930px) {

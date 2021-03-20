@@ -1,16 +1,4 @@
-.modal {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgb(0, 0, 0);
-  opacity: 0.5;
-  z-index: 150;
-
-  display: none;
-}
-
-.login {
+.sign-up {
   position: absolute;
   top: 0%;
   left: 50%;
@@ -47,19 +35,32 @@
     margin-bottom: 8px;
   }
 
-  .login-logo {
-    display: inline-block;
-    font-weight: 600;
-
-    span:nth-of-type(1) {
-      color: $violet;
-    }
-  }
-
   form {
     display: flex;
     flex-direction: column;
     margin-top: 24px;
+
+    .full-name {
+      display: flex;
+      justify-content: space-between;
+
+      input {
+        width: 49%;
+      }
+    }
+
+    .password {
+      display: flex;
+      justify-content: space-between;
+      input {
+        width: 49%;
+      }
+    }
+
+    input:focus-visible {
+      outline: none;
+      border: 1px solid $violet;
+    }
 
     label {
       text-align: left;
@@ -74,12 +75,7 @@
       margin-bottom: 24px;
     }
 
-    input:focus-visible {
-      outline: none;
-      border: 1px solid $violet;
-    }
-
-    .Sign-in {
+    .create-account {
       border-radius: 5px;
       border: 1px solid transparent;
       padding: 10px 0;
@@ -90,13 +86,13 @@
       margin-bottom: 24px;
     }
 
-    .Sign-in:hover {
+    .create-account:hover {
       cursor: pointer;
       background-color: #1e1e94;
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     }
 
-    .Sign-in:active {
+    .create-account:active {
       background-color: #16166b;
     }
 

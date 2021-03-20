@@ -38,13 +38,12 @@ body {
 
 .login {
   position: absolute;
-  top: 20%;
+  top: 0%;
   left: 50%;
-  z-index: 0;
-  -webkit-transform: translate(-50%, -20%);
-          transform: translate(-50%, -20%);
-  width: 448px;
-  height: 500px;
+  z-index: -5;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  width: 100%;
   padding: 48px 40px 36px 40px;
   text-align: center;
   border: 1px solid #dadce0;
@@ -53,8 +52,8 @@ body {
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   opacity: 0;
-  -webkit-transition: opacity 0.5s linear;
-  transition: opacity 0.5s linear;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -62,6 +61,13 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media (min-width: 600px) {
+  .login {
+    top: 20%;
+    max-width: 448px;
+  }
 }
 
 .login h3,
@@ -130,7 +136,136 @@ body {
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
+.login form .Sign-in:active {
+  background-color: #16166b;
+}
+
 .login form a {
+  text-decoration: none;
+}
+
+.sign-up {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  z-index: -5;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  width: 100%;
+  padding: 48px 40px 36px 40px;
+  text-align: center;
+  border: 1px solid #dadce0;
+  border-radius: 5px;
+  background-color: white;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 600px) {
+  .sign-up {
+    top: 20%;
+    max-width: 448px;
+  }
+}
+
+.sign-up h3,
+.sign-up p {
+  margin-top: 0;
+}
+
+.sign-up h3 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.sign-up form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 24px;
+}
+
+.sign-up form .full-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sign-up form .full-name input {
+  width: 49%;
+}
+
+.sign-up form .password {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sign-up form .password input {
+  width: 49%;
+}
+
+.sign-up form input:focus-visible {
+  outline: none;
+  border: 1px solid #2626bc;
+}
+
+.sign-up form label {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.sign-up form input {
+  padding: 13px 15px;
+  border: 1px solid #dadce0;
+  border-radius: 5px;
+  font-family: inherit;
+  margin-bottom: 24px;
+}
+
+.sign-up form .create-account {
+  border-radius: 5px;
+  border: 1px solid transparent;
+  padding: 10px 0;
+  font-family: inherit;
+  background-color: #2626bc;
+  color: #ffffff;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.sign-up form .create-account:hover {
+  cursor: pointer;
+  background-color: #1e1e94;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.sign-up form .create-account:active {
+  background-color: #16166b;
+}
+
+.sign-up form a {
   text-decoration: none;
 }
 
@@ -208,6 +343,12 @@ nav {
   cursor: pointer;
   background-color: #2626bc;
   color: white;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.nav__hamburger:active {
+  background-color: #16166b;
 }
 
 .nav__links {
@@ -246,6 +387,12 @@ nav {
 
 .nav__links a:last-child:hover {
   background-color: #1e1e94;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.nav__links a:last-child:active {
+  background-color: #16166b;
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
@@ -310,6 +457,10 @@ nav {
   background-color: #1e1e94;
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.hamburger__menu button:active {
+  background-color: #16166b;
 }
 
 @media (min-width: 930px) {
