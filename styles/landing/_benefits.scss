@@ -36,10 +36,6 @@
     }
   }
 
-  .container:not(:first-child):hover {
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  }
-
   .container:nth-of-type(1) {
     @media (min-width: 820px) {
       grid-column-start: 1;

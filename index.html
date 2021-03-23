@@ -35,7 +35,13 @@
           <label for="password">Password</label>
           <input type="password" placeholder="Password" />
 
-          <button class="Sign-in">Sign In</button>
+          <button
+            type="button"
+            class="Sign-in"
+            onclick="transitionToPage('/system.html')"
+          >
+            Sign In
+          </button>
           <p>
             Don't have an account yet? <a href="#" id="join">Join HealthRec</a>
           </p>
@@ -44,10 +50,12 @@
 
       <div class="sign-up">
         <h3>Create your HealthRec Account</h3>
-        <form action="#">
+        <form action="">
           <div class="account-type">
-            <button class="account-type__owner">Clinic Owner</button>
-            <button class="account-type__doctor">Doctor</button>
+            <button type="button" class="account-type__owner">
+              Clinic Owner
+            </button>
+            <button type="button" class="account-type__doctor">Doctor</button>
           </div>
           <div class="full-name">
             <input type="text" placeholder="First name" name="first-name" />
@@ -180,6 +188,7 @@
       <!-- wrapper -->
     </div>
 
+    <script src="pageTransition.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
