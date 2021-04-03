@@ -80,6 +80,10 @@ body {
       flex-shrink: -1;
 }
 
+.logo span {
+  color: #2626bc;
+}
+
 .links {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;

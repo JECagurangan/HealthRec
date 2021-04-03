@@ -39,6 +39,10 @@ body {
 .logo {
   margin-bottom: 60px;
   flex-shrink: -1;
+
+  span {
+    color: $violet;
+  }
 }
 
 .links {
