@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HealthRec | Login</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./landing-scss/landing.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- wrapper -->
+      <div class="modal"></div>
+      <div class="login">
+        <h3>Sign in</h3>
+        <p>
+          to continue to <span class="login-logo"><span>Health</span>Rec</span>
+        </p>
+        <form action="">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            placeholder="Email or Phone Number"
+            name="username"
+          />
+          <label for="password">Password</label>
+          <input type="password" placeholder="Password" />
+
+          <button
+            type="button"
+            class="Sign-in"
+            onclick="transitionToPage('/system.html')"
+          >
+            <!-- (temporary) redirects you to system immediately -->
+            Sign In
+          </button>
+          <p>
+            Don't have an account yet? <a href="#" id="join">Join HealthRec</a>
+          </p>
+        </form>
+      </div>
+
+      <div class="sign-up">
+        <h3>Create your HealthRec Account</h3>
+        <form action="/auth/register" method = "POST">
+          <div class="account-type">
+            <button type="button" class="account-type__owner" value="Clinic Owner" onclick="passValue(this)" >
+              Clinic Owner
+            </button>
+            <button type="button" class="account-type__doctor" value="Doctor" onclick="passValue(this)">Doctor</button>
+            <!-- transfers button value to submit button to allow us to pass button values -->
+            <script>
+              function passValue(element){
+                 document.getElementById("submitbtn").value = element.value
+              };
+              
+            </script>
+          </div>
+          <div class="full-name">
+            <input type="text" placeholder="First name" name="fname" />
+            <input type="text" placeholder="Last name" name="lname" />
+          </div>
+          <input type="text" placeholder="Username" name="username" />
+          <div class="password">
+            <input type="password" placeholder="Password" name="password" />
+            <input
+              type="password"
+              placeholder="Confirm"
+              name="passwordconfirm"
+            />
+          </div>
+          <button class="create-account" name="UserType" id = "submitbtn">Create Account</button>
+          {{#if message}}
+            <h4 class="alert alert-danger mt-4"> {{message}}</h4>
+          {{/if}}
+          <p>
+            Already have an account? <a href="#" id="back-to-login">Log in</a>
+          </p>
+        </form>
+      </div>
+
+      <header>
+        <nav>
+          <h1 class="nav__logo"><span>Health</span><span>Rec</span></h1>
+
+          <div class="nav__hamburger">Menu</div>
+
+          <div class="nav__links">
+            <a href="#">Company</a>
+            <a href="#">Features</a>
+            <a href="#">Pricing</a>
+            <a href="#">Contacts</a>
+            <a href="#" class="login-button">Sign In</a>
+          </div>
+        </nav>
+      </header>
+
+      <div class="welcome-container">
+        <section class="welcome">
+          <div class="hamburger__menu">
+            <a href="">Company</a>
+            <a href="">Features</a>
+            <a href="">Pricing</a>
+            <a href="">Contacts</a>
+            <button class="login-hamburger">Login</button>
+          </div>
+          <div class="welcome__statement">
+            <h3>Cloud and On-Premise</h3>
+            <h2>Hospital Information Management System</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa sed
+              quibusdam, ipsa excepturi sapiente quod delectus corrupti illum,
+              eum voluptate non labore quam, cupiditate sequi.
+            </p>
+          </div>
+
+          <div class="illustration"></div>
+        </section>
+      </div>
+
+      <div class="benefits-container">
+        <section class="benefits">
+          <div class="container">
+            <h3>Why Choose Us</h3>
+            <p>
+              Provide better service to your patients with our highly flexible
+              implementation and engagement models at a very accommodating price
+              point.
+            </p>
+          </div>
+
+          <div class="container">
+            <div class="icon icon--connect"></div>
+            <p>
+              <strong>Connect with all the stakeholders</strong> <br />
+              with our complete and extensive healthcare ecosystem.
+            </p>
+          </div>
+
+          <div class="container">
+            <div class="icon icon--avoid"></div>
+            <p>
+              <strong>Avoid deadling with multiple vendors</strong> and <br />
+              procure all kinds of services, products, and solutions in one
+              place.
+            </p>
+          </div>
+
+          <div class="container">
+            <div class="icon icon--comply"></div>
+            <p>
+              <strong>Comply with global standards</strong> <br />
+              and get customized solutions as per your business requirement.
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <div class="footer-container">
+        <footer>
+          <div class="members">
+            <span>CS155-2L</span>
+            <span>Agcanas</span>
+            <span>Balita</span>
+            <span>Cadiao</span>
+            <span>Cagurangan</span>
+            <span>Santos</span>
+          </div>
+
+          <div class="members">
+            <span>Follow Us</span>
+            <span>Facebook</span>
+            <span>Instagram</span>
+            <span>Behance</span>
+            <span>Dribbble</span>
+            <span>Twitter</span>
+          </div>
+
+          <div class="members">
+            <span>Links</span>
+            <span>Company</span>
+            <span>Features</span>
+            <span>Pricing</span>
+            <span>Contacts</span>
+            <span>Login</span>
+          </div>
+        </footer>
+      </div>
+
+      <!-- wrapper -->
+    </div>
+
+    <script src="./scripts/pageTransition.js"></script>
+    <script src="./scripts/app.js"></script>
+  </body>
+</html>
