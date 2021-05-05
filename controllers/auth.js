@@ -30,6 +30,7 @@ exports.login = async(req,res) => {
             } else{
                 //still need to be able to detect which user type is the user that has logged in
                 return res.render('system');
+                //test
             }
         });
     } catch(error){
