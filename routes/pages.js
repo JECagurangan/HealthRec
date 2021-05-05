@@ -6,6 +6,8 @@ router.get('/', (req,res) => {
     res.render('index');
 });
 
+
+
 router.get('/system', (req,res) => {
     res.render('system');
 });

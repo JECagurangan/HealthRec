@@ -65,7 +65,7 @@ modal.addEventListener("click", function () {
   login.style.opacity = "0";
   signUp.style.zIndex = "-5";
   signUp.style.opacity = "0";
-
+  
   resetJob();
 });
 

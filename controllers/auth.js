@@ -1,6 +1,9 @@
 const mysql = require("mysql");
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
+const express = require('express');
+
+const router = express.Router();
 const db = mysql.createConnection({
     host: process.env.DATABASE_HOST,
     //if server online replace localhost with serveraddress
@@ -8,6 +11,31 @@ const db = mysql.createConnection({
     password: process.env.DATABASE_PASSWORD,
     database: process.env.DATABASE
 });
+
+exports.login = async(req,res) => {
+    try{
+        const{username, password} = req.body;
+        if(!username || !password){
+            return res.status(400).render('index',{
+                message: "Email or Password is empty"   
+            });
+        }
+
+        db.query('SELECT * FROM users WHERE username = ?', [username], async(error,results) => {
+            console.log(results);
+            if(!results || !(await bcrypt.compare(password, results[0].password))){
+                return res.status(401).render('index', {
+                    message:"email or password is incorrect!"
+                });
+            } else{
+                //still need to be able to detect which user type is the user that has logged in
+                return res.render('system');
+            }
+        });
+    } catch(error){
+        console.log(error);
+    }
+};
 
 exports.register = (req,res) => {
     console.log(req.body);
@@ -21,12 +49,10 @@ exports.register = (req,res) => {
         }
 
         if(results.length > 0){
-            //not working yet
             return res.render('index', {
                 message: 'Username is already in use'
             });
         } else if(password != passwordconfirm){
-             //not working yet
             return res.render('index', {
                 message: 'Password do not match'
             });

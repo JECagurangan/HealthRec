@@ -14,18 +14,21 @@
     />
 
     <!-- css -->
-    <link rel="stylesheet" href="./landing-scss/landing.css" />
+    <link rel="stylesheet" href="/landing-scss/landing.css" >
   </head>
   <body>
     <div class="wrapper">
       <!-- wrapper -->
+      {{#if message}}
+            <h4 class="">{{message}}</h4>
+      {{/if}}
       <div class="modal"></div>
       <div class="login">
         <h3>Sign in</h3>
         <p>
           to continue to <span class="login-logo"><span>Health</span>Rec</span>
         </p>
-        <form action="">
+        <form action="/auth/login" method="POST">
           <label for="username">Username</label>
           <input
             type="text"
@@ -33,18 +36,17 @@
             name="username"
           />
           <label for="password">Password</label>
-          <input type="password" placeholder="Password" />
+          <input type="password" placeholder="Password" name="password" />
 
           <button
-            type="button"
-            class="Sign-in"
-            onclick="transitionToPage('/system.html')"
-          >
+            type="submit"
+            class="Sign-in">
+            <!--<onclick="transitionToPage('/system.html')"> -->
             <!-- (temporary) redirects you to system immediately -->
             Sign In
           </button>
           <p>
-            Don't have an account yet? <a href="#" id="join">Join HealthRec</a>
+            Don't have an account yet? <a href="#register" id="join">Join HealthRec</a>
           </p>
         </form>
       </div>
@@ -78,10 +80,9 @@
               name="passwordconfirm"
             />
           </div>
+          
           <button class="create-account" name="UserType" id = "submitbtn">Create Account</button>
-          {{#if message}}
-            <h4 class="alert alert-danger mt-4"> {{message}}</h4>
-          {{/if}}
+          
           <p>
             Already have an account? <a href="#" id="back-to-login">Log in</a>
           </p>
@@ -99,7 +100,7 @@
             <a href="#">Features</a>
             <a href="#">Pricing</a>
             <a href="#">Contacts</a>
-            <a href="#" class="login-button">Sign In</a>
+            <a href="#sign-in" class="login-button">Sign In</a>
           </div>
         </nav>
       </header>
@@ -199,7 +200,7 @@
       <!-- wrapper -->
     </div>
 
-    <script src="./scripts/pageTransition.js"></script>
-    <script src="./scripts/app.js"></script>
+    <script src="/scripts/pageTransition.js"></script>
+    <script src="/scripts/app.js"></script>
   </body>
 </html>
