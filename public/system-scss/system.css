@@ -167,6 +167,114 @@ body {
   gap: 33px;
 }
 
+.doctors-body {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  margin-left: 240px;
+  padding: 33px 49px 35px 32px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: minmax(0px, 72.5px) minmax(0px, 750px);
+      grid-template-rows: minmax(0px, 72.5px) minmax(0px, 750px);
+  gap: 33px;
+  display: none;
+}
+
+.doctors-body .doctor-form-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -100;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+}
+
+.doctors-body .doctor-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+          box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  padding-top: 3%;
+  padding-left: 15%;
+  padding-right: 15%;
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  z-index: -100;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+}
+
+.doctors-body .doctor-form form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.doctors-body .doctor-form form input {
+  padding: 13px 15px;
+  border: 1px solid #dadce0;
+  border-radius: 5px;
+  font-family: inherit;
+  margin-bottom: 24px;
+}
+
+.doctors-body .doctor-form form input:focus-visible {
+  outline: none;
+  border: 1px solid #2626bc;
+}
+
+.doctors-body .doctor-form form button {
+  border-radius: 5px;
+  border: 1px solid transparent;
+  padding: 20px 0;
+  font-family: inherit;
+  background-color: #2626bc;
+  color: #ffffff;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.doctors-body .doctor-form form .button:hover {
+  cursor: pointer;
+  background-color: #1e1e94;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.doctors-body .doctor-form form .button:active {
+  background-color: #16166b;
+}
+
+.patients-body {
+  min-height: 100vh;
+  width: 100%;
+  margin-left: 240px;
+  padding: 33px 49px 35px 32px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: minmax(0px, 72.5px) minmax(0px, 750px);
+      grid-template-rows: minmax(0px, 72.5px) minmax(0px, 750px);
+  gap: 33px;
+  display: none;
+}
+
 .component {
   width: 100%;
   display: -webkit-box;
@@ -191,6 +299,7 @@ body {
   border-radius: 5px;
   -webkit-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
           box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  padding: 20px;
 }
 
 .component--dashboard {
@@ -236,5 +345,104 @@ body {
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   grid-row: 3 / 4;
+}
+
+.component--doctors {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1 / 5;
+  -ms-grid-row: 1;
+  grid-row: 1 / 1;
+}
+
+.component__body-doctors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.component__body-doctors .addDoctor-button {
+  border: 1px solid transparent;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #00d1b2;
+  color: white;
+  font-weight: 800;
+}
+
+.component--doctors-table {
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+          box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  background-color: #ffffff;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1 / 5;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  -ms-grid-rows: (minmax(0px, 72.5px))[10];
+      grid-template-rows: repeat(10, minmax(0px, 72.5px));
+  -ms-grid-columns: 70px 250px 70px 100px 200px 200px 200px 200px 1fr;
+      grid-template-columns: 70px 250px 70px 100px 200px 200px 200px 200px 1fr;
+}
+
+.component--doctors-table button {
+  border: 1px solid transparent;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #00d1b2;
+  color: white;
+}
+
+.component--doctors-table button:nth-of-type(2) {
+  border: 1px solid transparent;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f14668;
+}
+
+.component--patients {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1 / 5;
+  -ms-grid-row: 1;
+  grid-row: 1 / 1;
+}
+
+.component--patients-table {
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+          box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  background-color: #ffffff;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1 / 5;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  -ms-grid-rows: (minmax(0px, 72.5px))[10];
+      grid-template-rows: repeat(10, minmax(0px, 72.5px));
+  -ms-grid-columns: 70px 250px 70px 100px 200px 200px 200px 200px;
+      grid-template-columns: 70px 250px 70px 100px 200px 200px 200px 200px;
+}
+
+.headers {
+  font-weight: 600;
 }
 /*# sourceMappingURL=system.css.map */

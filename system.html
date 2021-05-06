@@ -7,7 +7,7 @@
     <title>HealthRec | System</title>
 
     <!-- css -->
-    <link rel="stylesheet" href="./system-scss/system.css" />
+    <link rel="stylesheet" href="public/system-scss/system.css" />
   </head>
   <body>
     <div class="wrapper">
@@ -29,7 +29,7 @@
             </svg>
             Overview
           </div>
-          <div class="links__item">
+          <div class="links__item links__item--doctors">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 58.999 58.999"
@@ -41,7 +41,19 @@
             </svg>
             Doctors
           </div>
-          <div class="links__item">
+          <div class="links__item links__item--patients">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 60 60"
+              xmlns:v="https://vecta.io/nano"
+            >
+              <path
+                d="M54 58h-3v-4h-5V43.778c0-2.7-1.342-5.208-3.589-6.706L31.803 30l10.608-7.072C44.658 21.43 46 18.922 46 16.222V6h5V2h3a1 1 0 1 0 0-2H6a1 1 0 1 0 0 2h3v4h5v10.222c0 2.7 1.342 5.208 3.589 6.706L28.197 30l-10.608 7.072C15.342 38.57 14 41.078 14 43.778V54H9v4H6a1 1 0 1 0 0 2h48a1 1 0 1 0 0-2zM18.698 21.264A6.05 6.05 0 0 1 16 16.222V6h28v10.222a6.05 6.05 0 0 1-2.698 5.042L30 28.798l-11.302-7.534zM16 43.778a6.05 6.05 0 0 1 2.698-5.042L30 31.202l11.302 7.534A6.05 6.05 0 0 1 44 43.778V54H16V43.778zm4.917-25.842c-.574-.383-.917-1.024-.917-1.714V14a1 1 0 1 0-2 0v2.222a4.05 4.05 0 0 0 1.808 3.378l4.638 3.092a1 1 0 1 0 1.11-1.664l-4.639-3.092zM40.192 41.26l-4.638-3.092a1 1 0 1 0-1.11 1.664l4.638 3.092c.575.383.918 1.023.918 1.714v2.222a1 1 0 1 0 2 0v-2.222a4.05 4.05 0 0 0-1.808-3.378z"
+              />
+            </svg>
+            Patients
+          </div>
+          <div class="links__item links__item--income">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 58 58"
@@ -52,30 +64,6 @@
               />
             </svg>
             Income
-          </div>
-          <div class="links__item">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 60 60"
-              xmlns:v="https://vecta.io/nano"
-            >
-              <path
-                d="M54 58h-3v-4h-5V43.778c0-2.7-1.342-5.208-3.589-6.706L31.803 30l10.608-7.072C44.658 21.43 46 18.922 46 16.222V6h5V2h3a1 1 0 1 0 0-2H6a1 1 0 1 0 0 2h3v4h5v10.222c0 2.7 1.342 5.208 3.589 6.706L28.197 30l-10.608 7.072C15.342 38.57 14 41.078 14 43.778V54H9v4H6a1 1 0 1 0 0 2h48a1 1 0 1 0 0-2zM18.698 21.264A6.05 6.05 0 0 1 16 16.222V6h28v10.222a6.05 6.05 0 0 1-2.698 5.042L30 28.798l-11.302-7.534zM16 43.778a6.05 6.05 0 0 1 2.698-5.042L30 31.202l11.302 7.534A6.05 6.05 0 0 1 44 43.778V54H16V43.778zm4.917-25.842c-.574-.383-.917-1.024-.917-1.714V14a1 1 0 1 0-2 0v2.222a4.05 4.05 0 0 0 1.808 3.378l4.638 3.092a1 1 0 1 0 1.11-1.664l-4.639-3.092zM40.192 41.26l-4.638-3.092a1 1 0 1 0-1.11 1.664l4.638 3.092c.575.383.918 1.023.918 1.714v2.222a1 1 0 1 0 2 0v-2.222a4.05 4.05 0 0 0-1.808-3.378z"
-              />
-            </svg>
-            History
-          </div>
-          <div class="links__item">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 57 57"
-              xmlns:v="https://vecta.io/nano"
-            >
-              <path
-                d="M22.66 0H3.34C1.498 0 0 1.498 0 3.34v19.32C0 24.502 1.498 26 3.34 26h19.32c1.842 0 3.34-1.498 3.34-3.34V3.34C26 1.498 24.502 0 22.66 0zm10.68 26h19.32c1.842 0 3.34-1.498 3.34-3.34V3.34C56 1.498 54.502 0 52.66 0H33.34C31.498 0 30 1.498 30 3.34v19.32c0 1.842 1.498 3.34 3.34 3.34zm-10.68 4H3.34C1.498 30 0 31.498 0 33.34v19.32C0 54.502 1.498 56 3.34 56h19.32c1.842 0 3.34-1.498 3.34-3.34V33.34c0-1.842-1.498-3.34-3.34-3.34zM55 41H45V31a2 2 0 1 0-4 0v10H31a2 2 0 1 0 0 4h10v10a2 2 0 1 0 4 0V45h10a2 2 0 1 0 0-4z"
-              />
-            </svg>
-            Statistics
           </div>
         </div>
 
@@ -139,8 +127,297 @@
         </div>
       </div>
       <!-- overview end -->
+
+      <div class="doctors-body">
+        <div class="doctor-form-bg"></div>
+        <div class="doctor-form">
+          <form action="">
+            <h2>Fill out Doctor's Credentials</h2>
+
+            <input type="text" placeholder="First Name" />
+            <input type="text" placeholder="Last Name" />
+            <input type="email" placeholder="Email" />
+            <input type="text" placeholder="Username" />
+            <input type="password" placeholder="Password" />
+            <input type="password" placeholder="Confirm Password" />
+            <button>Create Account</button>
+          </form>
+        </div>
+
+        <div class="component component--doctors">
+          <div class="component__body component__body-doctors">
+            <h2 class="component__label">Doctors</h2>
+            <button class="addDoctor-button">Add a Doctor</button>
+          </div>
+        </div>
+        <div class="component component--doctors-table">
+          <div class="headers">ID</div>
+          <div class="headers">Name</div>
+          <div class="headers">Age</div>
+          <div class="headers">Gender</div>
+          <div class="headers">Specialization</div>
+          <div class="headers">Contact Number</div>
+          <div class="headers">License</div>
+          <div class="headers">Clinic ID</div>
+          <div class="headers">Manage</div>
+
+          <div>1</div>
+          <div>Larry Satterfield</div>
+          <div>38</div>
+          <div>Male</div>
+          <div>Neurology</div>
+          <div>09155742456</div>
+          <div>--------</div>
+          <div>0000001</div>
+          <div>
+            <button>Edit</button>
+            <button>Delete</button>
+          </div>
+
+          <div>1</div>
+          <div>Larry Satterfield</div>
+          <div>38</div>
+          <div>Male</div>
+          <div>Neurology</div>
+          <div>09155742456</div>
+          <div>--------</div>
+          <div>0000001</div>
+          <div>
+            <button>Edit</button>
+            <button>Delete</button>
+          </div>
+
+          <div>1</div>
+          <div>Larry Satterfield</div>
+          <div>38</div>
+          <div>Male</div>
+          <div>Neurology</div>
+          <div>09155742456</div>
+          <div>--------</div>
+          <div>0000001</div>
+          <div>
+            <button>Edit</button>
+            <button>Delete</button>
+          </div>
+
+          <div>1</div>
+          <div>Larry Satterfield</div>
+          <div>38</div>
+          <div>Male</div>
+          <div>Neurology</div>
+          <div>09155742456</div>
+          <div>--------</div>
+          <div>0000001</div>
+          <div>
+            <button>Edit</button>
+            <button>Delete</button>
+          </div>
+
+          <div>1</div>
+          <div>Larry Satterfield</div>
+          <div>38</div>
+          <div>Male</div>
+          <div>Neurology</div>
+          <div>09155742456</div>
+          <div>--------</div>
+          <div>0000001</div>
+          <div>
+            <button>Edit</button>
+            <button>Delete</button>
+          </div>
+
+          <div>1</div>
+          <div>Larry Satterfield</div>
+          <div>38</div>
+          <div>Male</div>
+          <div>Neurology</div>
+          <div>09155742456</div>
+          <div>--------</div>
+          <div>0000001</div>
+          <div>
+            <button>Edit</button>
+            <button>Delete</button>
+          </div>
+
+          <div>1</div>
+          <div>Larry Satterfield</div>
+          <div>38</div>
+          <div>Male</div>
+          <div>Neurology</div>
+          <div>09155742456</div>
+          <div>--------</div>
+          <div>0000001</div>
+          <div>
+            <button>Edit</button>
+            <button>Delete</button>
+          </div>
+
+          <div>1</div>
+          <div>Larry Satterfield</div>
+          <div>38</div>
+          <div>Male</div>
+          <div>Neurology</div>
+          <div>09155742456</div>
+          <div>--------</div>
+          <div>0000001</div>
+          <div>
+            <button>Edit</button>
+            <button>Delete</button>
+          </div>
+
+          <div>1</div>
+          <div>Larry Satterfield</div>
+          <div>38</div>
+          <div>Male</div>
+          <div>Neurology</div>
+          <div>09155742456</div>
+          <div>--------</div>
+          <div>0000001</div>
+          <div>
+            <button>Edit</button>
+            <button>Delete</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="patients-body">
+        <div class="component component--patients">
+          <div class="component__body">
+            <h2 class="component__label">Patients</h2>
+          </div>
+        </div>
+        <div class="component component--doctors-table">
+          <div class="headers">ID</div>
+          <div class="headers">Name</div>
+          <div class="headers">Age</div>
+          <div class="headers">Gender</div>
+          <div class="headers">Symptoms</div>
+          <div class="headers">Diagnosis</div>
+          <div class="headers">Treatment</div>
+          <div class="headers">Consultation Fee</div>
+          <div class="headers">Manage</div>
+
+          <div>1</div>
+          <div>Rebecca Bauch</div>
+          <div>21</div>
+          <div>Female</div>
+          <div>Coughing, Fever</div>
+          <div>Tubercolosis</div>
+          <div>Sleeping</div>
+          <div>420,420.00</div>
+          <div>
+            <button>Edit</button>
+            <button>Delete</button>
+          </div>
+
+          <div>1</div>
+          <div>Rebecca Bauch</div>
+          <div>21</div>
+          <div>Female</div>
+          <div>Coughing, Fever</div>
+          <div>Tubercolosis</div>
+          <div>Sleeping</div>
+          <div>420,420.00</div>
+          <div>
+            <button>Edit</button>
+            <button>Delete</button>
+          </div>
+
+          <div>1</div>
+          <div>Rebecca Bauch</div>
+          <div>21</div>
+          <div>Female</div>
+          <div>Coughing, Fever</div>
+          <div>Tubercolosis</div>
+          <div>Sleeping</div>
+          <div>420,420.00</div>
+          <div>
+            <button>Edit</button>
+            <button>Delete</button>
+          </div>
+
+          <div>1</div>
+          <div>Rebecca Bauch</div>
+          <div>21</div>
+          <div>Female</div>
+          <div>Coughing, Fever</div>
+          <div>Tubercolosis</div>
+          <div>Sleeping</div>
+          <div>420,420.00</div>
+          <div>
+            <button>Edit</button>
+            <button>Delete</button>
+          </div>
+
+          <div>1</div>
+          <div>Rebecca Bauch</div>
+          <div>21</div>
+          <div>Female</div>
+          <div>Coughing, Fever</div>
+          <div>Tubercolosis</div>
+          <div>Sleeping</div>
+          <div>420,420.00</div>
+          <div>
+            <button>Edit</button>
+            <button>Delete</button>
+          </div>
+
+          <div>1</div>
+          <div>Rebecca Bauch</div>
+          <div>21</div>
+          <div>Female</div>
+          <div>Coughing, Fever</div>
+          <div>Tubercolosis</div>
+          <div>Sleeping</div>
+          <div>420,420.00</div>
+          <div>
+            <button>Edit</button>
+            <button>Delete</button>
+          </div>
+
+          <div>1</div>
+          <div>Rebecca Bauch</div>
+          <div>21</div>
+          <div>Female</div>
+          <div>Coughing, Fever</div>
+          <div>Tubercolosis</div>
+          <div>Sleeping</div>
+          <div>420,420.00</div>
+          <div>
+            <button>Edit</button>
+            <button>Delete</button>
+          </div>
+
+          <div>1</div>
+          <div>Rebecca Bauch</div>
+          <div>21</div>
+          <div>Female</div>
+          <div>Coughing, Fever</div>
+          <div>Tubercolosis</div>
+          <div>Sleeping</div>
+          <div>420,420.00</div>
+          <div>
+            <button>Edit</button>
+            <button>Delete</button>
+          </div>
+
+          <div>1</div>
+          <div>Rebecca Bauch</div>
+          <div>21</div>
+          <div>Female</div>
+          <div>Coughing, Fever</div>
+          <div>Tubercolosis</div>
+          <div>Sleeping</div>
+          <div>420,420.00</div>
+          <div>
+            <button>Edit</button>
+            <button>Delete</button>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <script src="./scripts/pageTransition.js"></script>
+    <script src="public/scripts/pageTransition.js"></script>
+    <script src="public/scripts/system.js"></script>
   </body>
 </html>
